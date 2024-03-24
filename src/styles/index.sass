@@ -4,6 +4,87 @@ $faq-white: hsl(0, 0%, 100%)
 $faq-light-pink: hsl(275, 100%, 97%)
 $faq-gray-purple: hsl(292, 16%, 49%)
 $faq-purple: hsl(292, 42%, 14%)
+$faq-font: 12px
+
+$breakpoint-sm: 280px
+$breakpoint-lg: 768px
+
+%place-content
+  display: flex
+  align-items: center
+  justify-content: center
 
 body 
+  @extend %place-content
+  flex-direction: column
   font: 100% $font-stack
+  background: $faq-light-pink url("../../assets/images/background-pattern-desktop.svg") no-repeat left top
+  height: 100vh
+
+.main-container 
+  background-color: $faq-white
+  width: 80%
+  margin: auto
+  border-radius: 8px
+  padding: 25px
+
+.header 
+  @extend %place-content
+  justify-content: flex-start
+  gap: 15px
+
+.header
+  h2
+    color: $faq-purple
+    font-size: 25px
+    font-weight: 700
+
+section 
+  border-bottom: 1px solid #EEE
+
+.question
+  @extend %place-content
+  justify-content: space-between
+  gap: 10px
+  cursor: pointer
+  :hover
+    color: purple
+
+.question
+  h3
+    font-size: $faq-font
+    color: $faq-purple
+
+.icon-minus
+  display: none
+
+.answer
+  display: none
+  font-size: $faq-font
+  font-weight: 500
+  max-height: 0
+  overflow: hidden
+  color: grey
+
+.answer.active
+  display: block
+  max-height: 150px
+
+footer 
+  position: absolute
+  bottom: 5px
+  font-size: 8px
+  text-align: center
+
+@media (min-width: $breakpoint-lg) 
+  .main-container 
+    width: 40%
+
+  .header
+    h2
+      color: $faq-purple
+      font-size: 35px
+      font-weight: 700
+
+  footer 
+    font-size: 10px
