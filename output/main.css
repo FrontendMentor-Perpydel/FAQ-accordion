@@ -42,6 +42,9 @@ section {
 .question :hover {
   color: purple;
 }
+.question :focus {
+  color: purple;
+}
 
 .question h3 {
   font-size: 12px;

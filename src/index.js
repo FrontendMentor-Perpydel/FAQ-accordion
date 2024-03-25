@@ -2,10 +2,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // the accordion (question and answer)
   const accordions = document.querySelectorAll('.accordion-section');
 
-  accordions.forEach(accordion => {
+  accordions.forEach((accordion, index) => {
     // each question
     const question = accordion.querySelector('.question');
 
+    // Handle mouse event
     question.addEventListener('click', () => {
         // each answer
       const answer = accordion.querySelector('.answer');
