@@ -32,6 +32,11 @@ body {
 
 section {
   border-bottom: 1px solid #EEE;
+  padding: 3px 0px;
+}
+
+section:last-child {
+  border-bottom: none;
 }
 
 .question {
@@ -43,6 +48,9 @@ section {
   color: purple;
 }
 .question :focus {
+  color: purple;
+}
+.question :active {
   color: purple;
 }
 
@@ -62,11 +70,12 @@ section {
   max-height: 0;
   overflow: hidden;
   color: grey;
+  transition: max-height 3s ease-out;
 }
 
 .answer.active {
   display: block;
-  max-height: 150px;
+  max-height: 500px;
 }
 
 footer {

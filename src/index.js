@@ -19,12 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // if the answer is open/active
       if (answer.classList.contains('active')) {
-        answer.style.display = 'block';
         iconMinus.style.display = 'block';
         iconPlus.style.display = 'none';
         // if the answer is closed/not active
       } else {
-        answer.style.display = 'none';
         iconMinus.style.display = 'none';
         iconPlus.style.display = 'block';
       }

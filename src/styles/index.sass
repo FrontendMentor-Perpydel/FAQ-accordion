@@ -5,6 +5,9 @@ $faq-light-pink: hsl(275, 100%, 97%)
 $faq-gray-purple: hsl(292, 16%, 49%)
 $faq-purple: hsl(292, 42%, 14%)
 $faq-font: 12px
+$faq-max-height: 500px
+$animation-duration: 3s
+$animation-easing: ease-out
 
 $breakpoint-sm: 280px
 $breakpoint-lg: 768px
@@ -41,6 +44,10 @@ body
 
 section 
   border-bottom: 1px solid #EEE
+  padding: 3px 0px
+
+section:last-child
+  border-bottom: none
 
 .question
   @extend %place-content
@@ -50,6 +57,8 @@ section
   :hover
     color: purple
   :focus
+    color: purple
+  :active
     color: purple
 
 .question
@@ -67,10 +76,11 @@ section
   max-height: 0
   overflow: hidden
   color: grey
+  transition: max-height $animation-duration $animation-easing
 
 .answer.active
   display: block
-  max-height: 150px
+  max-height: $faq-max-height
 
 footer 
   position: absolute
@@ -90,3 +100,5 @@ footer
 
   footer 
     font-size: 10px
+
+
