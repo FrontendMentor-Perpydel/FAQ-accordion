@@ -17,6 +17,7 @@ body {
   margin: auto;
   border-radius: 8px;
   padding: 25px;
+  box-shadow: 0 3px 3px rgba(128, 0, 128, 0.1);
 }
 
 .header {
@@ -87,7 +88,7 @@ footer {
 
 @media (min-width: 768px) {
   .main-container {
-    width: 40%;
+    width: 35%;
   }
   .header h2 {
     color: hsl(292, 42%, 14%);
